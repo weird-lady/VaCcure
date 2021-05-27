@@ -1,0 +1,392 @@
+# Query: classname
+# ContextLines: 1
+
+147 results - 7 files
+
+client/src/App.js:
+  44          <Router>
+  45:           <div className="App">
+  46              <Navbar />
+
+client/src/components/auth/Login.js:
+    5  import { loginUser } from "../../actions/authActions";
+    6: import classname from "classname";
+    7  
+
+   55      return (
+   56:       <div className="container">
+   57:         <div style={{ marginTop: "4rem" }} className="row">
+   58:           <div className="col s8 offset-s2">
+   59:             <Link to="/" className="btn-flat waves-effect">
+   60:               <i className="material-icons left">keyboard_backspace</i> Back to
+   61                home
+   62              </Link>
+   63:             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+   64                <h4>
+
+   66                </h4>
+   67:               <p className="grey-text text-darken-1">
+   68                  Don't have an account? <Link to="/register">Register</Link>
+
+   71              <form noValidate onSubmit={this.onSubmit}>
+   72:             <div className="input-field col s12">
+   73                  <input
+
+   78                    type="text"
+   79:                   className={classname("", {
+   80                      invalid: errors.username || errors.usernameincorrect
+
+   83                  <label htmlFor="username">Username</label>
+   84:                 <span className="red-text">
+   85                    {errors.username}
+
+   88                </div>
+   89:               <div className="input-field col s12">
+   90                  <input
+
+   95                    type="password"
+   96:                   className={classname("", {
+   97                      invalid: errors.password || errors.passwordincorrect
+
+  100                  <label htmlFor="password">Password</label>
+  101:                 <span className="red-text">
+  102                    {errors.password}
+
+  105                </div>
+  106:               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+  107                  <button
+
+  114                    type="submit"
+  115:                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+  116                  >
+
+client/src/components/auth/Register.js:
+    5  import { registerUser } from "../../actions/authActions";
+    6: import classnames from "classname";
+    7  
+
+   65      return (
+   66:       <div className="container">
+   67:         <div className="row">
+   68:           <div className="col s8 offset-s2">
+   69:             <Link to="/" className="btn-flat waves-effect">
+   70:               <i className="material-icons left">keyboard_backspace</i> Back to
+   71                home
+   72              </Link>
+   73:             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+   74                <h4>
+
+   76                </h4>
+   77:               <p className="grey-text text-darken-1">
+   78                  Already have an account? <Link to="/login">Log in</Link>
+
+   81              <form noValidate onSubmit={this.onSubmit}>
+   82:               <div className="input-field col s12">
+   83                  <input
+
+   88                    type="text"
+   89:                   className={classname("", {
+   90                      invalid: errors.hospitalName
+
+   93                  <label htmlFor="hospitalName">Hospital's Name</label>
+   94:                 <span className="red-text">{errors.hospitalName}</span>
+   95                </div>
+   96:               <div className="input-field col s12">
+   97                  <input
+
+  102                    type="text"
+  103:                   className={classname("", {
+  104                      invalid: errors.address
+
+  107                  <label htmlFor="address">Address</label>
+  108:                 <span className="red-text">{errors.address}</span>
+  109                </div>
+  110:               <div className="input-field col s12">
+  111                  <input
+
+  116                    type="text"
+  117:                   className={classname("", {
+  118                      invalid: errors.city
+
+  121                  <label htmlFor="city">City</label>
+  122:                 <span className="red-text">{errors.city}</span>
+  123                </div>
+  124:               <div className="input-field col s12">
+  125                  <input
+
+  130                    type="text"
+  131:                   className={classname("", {
+  132                      invalid: errors.country
+
+  135                  <label htmlFor="country">Country</label>
+  136:                 <span className="red-text">{errors.country}</span>
+  137                </div>
+  138:               <div className="input-field col s12">
+  139                  <input
+
+  144                    type="text"
+  145:                   className={classname("", {
+  146                      invalid: errors.phone
+
+  149                  <label htmlFor="phone">Phone</label>
+  150:                 <span className="red-text">{errors.phone}</span>
+  151                </div>
+  152:               <div className="input-field col s12">
+  153                  <input
+
+  158                    type="email"
+  159:                   className={classname("", {
+  160                      invalid: errors.email
+
+  163                  <label htmlFor="email">Email</label>
+  164:                 <span className="red-text">{errors.email}</span>
+  165                </div>
+  166:               <div className="input-field col s12">
+  167                  <input
+
+  172                    type="text"
+  173:                   className={classname("", {
+  174                      invalid: errors.username
+
+  177                  <label htmlFor="username">Username</label>
+  178:                 <span className="red-text">{errors.username}</span>
+  179                </div>
+  180:               <div className="input-field col s12">
+  181                  <input
+
+  186                    type="password"
+  187:                   className={classname("", {
+  188                      invalid: errors.password
+
+  191                  <label htmlFor="password">Password</label>
+  192:                 <span className="red-text">{errors.password}</span>
+  193                </div>
+  194:               <div className="input-field col s12">
+  195                  <input
+
+  200                    type="password"
+  201:                   className={classname("", {
+  202                      invalid: errors.password2
+
+  205                  <label htmlFor="password2">Confirm Password</label>
+  206:                 <span className="red-text">{errors.password2}</span>
+  207                </div>
+  208:               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+  209                  <button
+
+  216                    type="submit"
+  217:                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+  218                  >
+
+client/src/components/dashboard/Dashboard.js:
+  114        
+  115:       <div  className="container valign-wrapper" style={{width:"100%", display: "flex"}}>
+  116:         <div className="row">
+  117          <div class="left">
+  118:         <div className="col s12" style={{background:"#54B8C5",right:"0",left:"0",width: "1440px", height:"130px"}}>
+  119          <div class="center">
+
+  376      </div>  
+  377:     <div className="col s6">
+  378                <Link
+
+  386                  }}
+  387:                 className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+  388                >
+
+  403                onClick={this.onLogoutClick}
+  404:               className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+  405              >
+
+client/src/components/layout/Landing.js:
+   6      return (
+   7:       <div style={{ height: "75vh" }} className="container valign-wrapper">
+   8:         <div className="row">
+   9:           <div className="col s12 center-align">
+  10              <h4>
+
+  12              </h4>
+  13:             <p className="flow-text grey-text text-darken-1">
+  14                Virus Accurate Cure 
+
+  16              <br />
+  17:             <div className="col s6">
+  18                <Link
+
+  24                  }}
+  25:                 className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+  26                >
+
+  29              </div>
+  30:             <div className="col s6">
+  31                <Link
+
+  37                  }}
+  38:                 className="btn btn-large btn-flat waves-effect white black-text"
+  39                >
+
+client/src/components/statistics/Stats.js:
+  10          ...pointer,
+  11:         title: <a href={pointer.url} className="active-pointer__link" target="_blank">{pointer.title}</a>
+  12      }))*/
+
+  39      return (
+  40:         <div className="pointers-table-component" id="pointers-table">
+  41              <MDBDataTable
+
+client/src/components/vaccine/newAppointment.js:
+    8  import { sendToken } from "../../actions/appointmentActions";
+    9: import classnames from "classname";
+   10  
+
+   79      return (
+   80:       <div className="container">
+   81:         <div className="row">
+   82:           <div className="col s8 offset-s2">
+   83:             <Link to="/" className="btn-flat waves-effect">
+   84:               <i className="material-icons left">keyboard_backspace</i> Back to
+   85                home
+   86              </Link>
+   87:             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+   88                <h4>
+
+   92                <br></br>
+   93:               <p className="black-text text-darken-1"style={{ paddingLeft: "8rem" }}>
+   94                  <b>Citizen's card: </b>
+
+   97            <form noValidate onSubmit={this.onSubmit}>
+   98:             <div className="col s8 offset-s2" style={{ backgroundColor: "#D9F2F8", width: "500px"}}>
+   99:               <div className="input-field col s12">
+  100                  <input
+
+  105                    type="text"
+  106:                   className={classname("", {
+  107                      invalid: errors.firstName
+
+  109                  />
+  110:                 <label htmlFor="firstName"><b className="black-text text-darken-1">First Name</b></label>
+  111:                 <span className="red-text">{errors.firstName}</span>
+  112                </div>
+  113:               <div className="input-field col s12">
+  114                  <input
+
+  119                    type="text"
+  120:                   className={classname("", {
+  121                      invalid: errors.lastName
+
+  123                  />
+  124:                 <label htmlFor="lastName"><b className="black-text text-darken-1">Last Name</b></label>
+  125:                 <span className="red-text">{errors.lastName}</span>
+  126                </div>
+  127:               <div className="input-field col s12">
+  128                  <input
+
+  133                    type="text"
+  134:                   className={classname("", {
+  135                      invalid: errors.phone
+
+  137                  />
+  138:                 <label htmlFor="phone"><b className="black-text text-darken-1">Phone </b></label>
+  139:                 <span className="red-text">{errors.phone}</span>
+  140                </div>
+
+  143                      <input type="radio" id="male" name="gender"  value="male" />
+  144:                     <span><b className="black-text text-darken-1">Male</b></span>
+  145                    </label>
+
+  150                      <input type="radio" id="female" name="gender" value="female"/>
+  151:                     <span><b className="black-text text-darken-1">Female</b></span>
+  152                    </label>
+  153                  </div>
+  154:               <div className="input-field col s12">
+  155                  <input
+
+  160                    type="text"
+  161:                   className={classname("", {
+  162                      invalid: errors.amka
+
+  164                  />
+  165:                 <label htmlFor="amka"><b className="black-text text-darken-1">AMKA:</b></label>
+  166:                 <span className="red-text">{errors.amka}</span>
+  167                </div>
+  168:               <div className="input-field col s12">
+  169                  <input
+
+  174                    type="date"
+  175:                   className={classname("", {
+  176                      invalid: errors.dateOfBirth
+
+  178                  />
+  179:                 <label htmlFor="dateOfBirth"><b className="black-text text-darken-1">Date of Birth</b></label>
+  180:                 <span className="red-text">{errors.dateOfBirth}</span>
+  181                </div>
+  182:               <div className="input-field col s12">
+  183                  <input
+
+  188                    type="text"
+  189:                   className={classname("", {
+  190                      invalid: errors.address
+
+  192                  />
+  193:                 <label htmlFor="address"><b className="black-text text-darken-1">Full Address</b></label>
+  194:                 <span className="red-text">{errors.address}</span>
+  195                </div>
+  196:               <div className="input-field col s12">
+  197                  <input
+
+  202                    type="date"
+  203:                   className={classname("", {
+  204                      invalid: errors.dateDose1
+
+  206                  />
+  207:                 <label htmlFor="dateDose1"><b className="black-text text-darken-1">Date of Dose-1</b></label>
+  208:                 <span className="red-text">{errors.dateDose1}</span>
+  209                </div>
+  210:               <div className="input-field col s12">
+  211                  <input
+
+  216                    type="date"
+  217:                   className={classname("", {
+  218                      invalid: errors.dateDose2
+
+  220                  />
+  221:                 <label htmlFor="dateDose2"><b className="black-text text-darken-1"><b className="black-text text-darken-1">Date of Dose-2</b></b></label>
+  222:                 <span className="red-text">{errors.dateDose2}</span>
+  223                  <hr  style={{
+
+  233                
+  234:               <div className="input-field col s12">
+  235                  <input
+
+  240                    type="text"
+  241:                   className={classname("", {
+  242                      invalid: errors.vaccineBrand
+
+  244                  />
+  245:                 <label htmlFor="vaccineBrand"><b><b className="black-text text-darken-1">Vaccine's Brand</b></b></label>
+  246:                 <span className="red-text">{errors.vaccineBrand}</span>
+  247                  <hr  style={{
+
+  259                      <input type="checkbox" name="test" id="doseOneCompleted" value={this.state.doseOneCompleted = true} onChange={this.onChange}/>
+  260:                     <span><b className="black-text text-darken-1">First dose</b></span>
+  261                    </label>
+
+  266                      <input type="checkbox" name="test" id="doseTwoCompleted" value={this.state.doseTwoCompleted = true} onChange={this.onChange} />
+  267:                     <span><b className="black-text text-darken-1">Second dose</b></span>
+  268                    </label>
+
+  280                </div>
+  281:               <span><b><b className="black-text text-darken-1">Symptoms: </b></b></span> 
+  282                 <textarea  name="symptoms" id="symptoms" value={this.state.symptoms} onChange={this.onChange}
+
+  295                
+  296:                <span><b><b className="black-text text-darken-1">Comments: </b></b></span> 
+  297                 <textarea  name="coments" id="comments" value={this.state.comments} onChange={this.onChange}
+
+  318                
+  319:               <div className="col s12" style={{ paddingLeft: "330px" }}>
+  320                  <button
+
+  327                    type="submit"
+  328:                   className="btn btn-large waves-effect waves-light hoverable marine accent-3"
+  329                  >
